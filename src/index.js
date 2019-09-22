@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router} from 'react-router-dom'
 
+import { InfoProvider } from './Components/context'
+
 ReactDOM.render(
-  <Router>
-    <App/>
-  </Router> , document.getElementById('root'));
+  <InfoProvider>
+    <Router>
+      <App/>
+    </Router>
+  </InfoProvider> , document.getElementById('root'));
 

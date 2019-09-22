@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
+import { InfoConsumer } from '../context'
 
 class Home extends Component{
   render() {
     return (
-      <div>
-        <h2>Home page...</h2>
-      </div>
+      <InfoConsumer>
+        {value => {
+          return <h2>{value}</h2>
+        }}
+      </InfoConsumer>
     );
   }
 }
